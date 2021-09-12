@@ -1,0 +1,99 @@
+input{
+    height: 15px;
+    width: 250px;
+}
+
+label{
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.entity{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#container{
+    border: 5px inset goldenrod;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-left: 500px;
+    background-color: gray;
+    width: 320px;
+    border-radius: 25px;
+}
+#submit{
+    padding-right: 5px;
+    text-align: center;
+    margin-left: 10px;
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+#text{
+    margin-top: 100px;
+    font-weight: 100;
+    font-size: 20px;
+}
+a:link {
+color: red;
+}
+a:visited {
+color: green;
+}
+
+a:hover {
+color: white;
+background-color: black;
+}
+#submit{
+background-color: #f44336;
+color: black;
+padding: 8px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+width:auto;
+font-weight: bold;
+background-color: white;
+}
+
+#submit:hover {
+background-color:black;
+color:white;
+}
+
+a{
+  border-radius: 10px;
+  background-color: green;
+    color: white;
+  padding: 10px 20px; 
+  border: 1px solid green;
+  font-weight: bold;  
+}
+
+a:hover{
+    
+    background: white;
+  color: green;
+  font-size: 115%;
+}
+
+.treat{
+    background-color: crimson;
+    color: white;
+    padding: 30px 50px;
+    font-size: 120%;
+    font-family: sans-serif;
+    width: 700px;
+    margin-left: 20%;
+}
+

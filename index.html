@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <link rel="stylesheet" href="/mystyle.css">
+    <style>
+        #para{
+            font-size: 20px;
+            border: 2px solid green;
+            padding: 10px 20px;
+        }
+
+        #welcome{
+            background-color: brown;
+            color: white;
+            padding: 30px 20px;
+            border: 1px solid black;
+            margin-top: 100px;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body onload="FirstFunction()" style="background-color:black;">
+    <script>
+        function FirstFunction(){
+            var name = prompt("Please, Enter Your Name");
+            if (name == ""){
+                document.getElementById("welcome").innerHTML = "Hello STRANGER, Welcome to my Page, thrilled to have you here. Stick around as I've got some treats for you. However, there is a condition for you to enjoy the treats. ";
+            
+            }
+            else {
+                
+                document.getElementById("welcome").innerHTML = "Hello "+ name + ", Welcome to my Page, thrilled to have you here. Stick around as I've got some treats for you. However, there is a condition for you to enjoy the treats. ";
+            }
+        }
+    
+    </script>
+
+    <div id="welcome"></div>
+    <button id="btn1" style="margin-top: 20px; margin-left: 35%;"><a>Click if you agree with the condition</a></button>
+    <div  id="wop" style="display: none; margin-bottom: 10px; color: whitesmoke;">
+        <p>Let's say it's a way to determine if you are worthy of enjoying the treats.</p>
+        <p> I have a question for you, if you get it then you can explore my page</p>
+        <p>Are you ready? Here it comes</p>
+        <p style="font-size: 170%;">Solve the arithmetic, (20 - 18) * 8 - (3 + 2) </p>
+        <input type="number" id="answer" autocomplete="off" style="margin-left: 35%;">
+        <button id="worth"><a>Check your Worthiness</a></button>
+    </div>
+
+    <div id="acessdenied" style="display: none; color: red; font-size: 150%;">
+        <p>Ooops, You got it wrong</p>
+        <p>Sorry, the page has deemed you unworthy of enjoying the treats right now</p>
+        <p>The good news is you can try this again by reloading the page</p>
+        <p>Better Luck Next Time</p>
+    </div>
+    
+
+    <div id="mcontainer" style="display: none;">
+        <div style="font-size: 150%; background-color: gray; padding: 30px 30px; margin-bottom: 30px;" >
+            <p>Congratulations!!! You are deemed worthy.</p>
+            <p>As Promised, the treat is to show you some of the tricks that can be performed with Javascript</p>
+        </div>
+        <div class="treat">
+            <h2 style="text-align: center;">First Treat</h2>
+            <P>Firstly, If you move your mouse into the box below, it changes its background and text colours</P>
+            <p>Secondly, if you click on the box, the font size increases (Amazing right)</p>
+            <p>Finally, if you double click, the whole box dissappears (magical! isn't it?)</p>
+        </div>
+    <div>
+        <p id="para" style="width: 500px; padding:20px 20px; margin-left: 30%; border: 2px solid white;">Hello! Click on me to see some wonders of JavaScript and J Query</p>
+    </div>
+
+    <div class="treat" style="margin-bottom: 30px; margin-top: 30px;">
+        <h2 style="text-align: center;">Second Treat</h2>
+        <p>This treat moves a box across the inner perimeter of a rectangle in clockwise and anti-clockwise directions.</p>
+    </div>
+
+    <div style="max-width: 1000px; height:500px; border: 1px solid black; margin-bottom: 30px; border: 2px solid white; margin-left: 14%;">
+    <div id="divc" style= "position:relative; padding: 0px 0px">
+        <img src="/rock.jpg" width="150px" height="150px"> 
+    </div>
+    </div>
+    <button id="btnc" style="margin-left: 25%;"><a>Click Me to move in clockwise Direction</a></button>
+    <button id="btna"><a>Click Me to move in Anti-clockwise Direction</a></button>
+
+    <div class="treat" style="margin-top: 30px;">
+        <h2 style="text-align: center;">Third Treat</h2>
+        <p>Below is a form asking a user to input password and confirm the password among other things</p>
+        <p>If the password entered does NOT match the confirm password, when the mouse leaves form border line, the password and confirm password fields dissappears and is replaced by an error message.</p>
+        <p>Cool right! check it out</p>
+    </div>
+
+    <div id = "container">
+        <form>
+            <div class ="entity">
+            <label for="firstName">First Name: </label>
+            <input id ="firstName" name="FirstName" placeholder="First Name">
+            </div>
+            <div class ="entity">
+            <label for="lastName">Last Name: </label>
+            <input id ="lastName" name="LastName" placeholder="Last Name">
+            </div>
+            <div class ="entity">
+            <label for="Email">Email:</label>
+            <input id ="Email" type="email" name="Email" placeholder="Email">
+            </div>
+            <div id="special" >
+            <div class ="entity"> 
+            <label for="Password">Password</label>
+            <input id ="Password" type="password" name="Password" placeholder="Password">
+            </div>
+            <div class ="entity">
+            <label for="ConfirmPassword">Confirm Password</label>
+            <input id ="ConfirmPassword" type ="password" name="ConfirmPassword" placeholder="Confirm Password">
+            </div>
+            </div>
+            <input id="submit" type="submit" value="Submit">    
+        </form>
+        </div>
+        </div>
+        
+   
+   <script src="/JQuery/JQuery.js"></script>
+   <script src="/myquery.js"></script> 
+   <script>   
+        $(function(){
+        $("#container").mouseleave(function(){
+        var password = document.getElementById("Password").value;
+        var confirmPassword = document.getElementById("ConfirmPassword").value;
+        if (password != confirmPassword){
+               $("#special").hide();
+            //    document.getElementById("demo").style.color = "red";
+            //    document.getElementById("demo").style.fontSize = "15px";  
+               document.getElementById("special").innerHTML = "Sorry!, Password and Confirm Password fields does not match. Refresh and enter again";
+               $("#special").show();
+        }
+        });
+
+        });
+
+        $(function(){
+        $("#worth").click(function(){
+        var response = document.getElementById("answer").value;
+        if (response == 11){
+               $("#mcontainer").show();
+        }
+        else{
+            $("#acessdenied").show();
+        }
+        });
+
+        });
+
+        $(function(){
+        $("#btn1").click(function(){
+   
+               $("#wop").show();
+        
+        });
+
+        });
+   </script>
+</body>
+</html>

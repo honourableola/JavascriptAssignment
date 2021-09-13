@@ -24,7 +24,7 @@
         
     </style>
 </head>
-<body onload="FirstFunction()" style="background-color:black;">
+<body onload="FirstFunction()">
     <script>
         function FirstFunction(){
             var name = prompt("Please, Enter Your Name");
@@ -39,14 +39,16 @@
         }
     
     </script>
+    
 
     <div id="welcome"></div>
     <button id="btn1" style="margin-top: 20px; margin-left: 35%;"><a>Click if you agree with the condition</a></button>
-    <div  id="wop" style="display: none; margin-bottom: 10px; color: whitesmoke;">
-        <p>Let's say it's a way to determine if you are worthy of enjoying the treats.</p>
+    <div  id="wop" style="display: none; margin-bottom: 10px; color: brown; font-family: 'Courier New', Courier, monospace
+    ; font-size: 130%;">
+        <p>The condition is that you will be assesed to determine if you are worthy of enjoying the treats.</p>
         <p> I have a question for you, if you get it then you can explore my page</p>
-        <p>Are you ready? Here it comes</p>
-        <p style="font-size: 170%;">Solve the arithmetic, (20 - 18) * 8 - (3 + 2) </p>
+        <p>Are you ready? Here it comes!!</p>
+        <p style="font-size: 170%;">Solve the arithmetic: (20 - 18) * 8 - (3 + 2) </p>
         <input type="number" id="answer" autocomplete="off" style="margin-left: 35%;">
         <button id="worth"><a>Check your Worthiness</a></button>
     </div>
@@ -58,7 +60,6 @@
         <p>Better Luck Next Time</p>
     </div>
     
-
     <div id="mcontainer" style="display: none;">
         <div style="font-size: 150%; background-color: gray; padding: 30px 30px; margin-bottom: 30px;" >
             <p>Congratulations!!! You are deemed worthy.</p>
@@ -71,7 +72,7 @@
             <p>Finally, if you double click, the whole box dissappears (magical! isn't it?)</p>
         </div>
     <div>
-        <p id="para" style="width: 500px; padding:20px 20px; margin-left: 30%; border: 2px solid white;">Hello! Click on me to see some wonders of JavaScript and J Query</p>
+        <p id="para" style="width: 500px; padding:20px 20px; margin-left: 30%; border: 2px solid grey;">Hello! Click on me to see some wonders of JavaScript and J Query</p>
     </div>
 
     <div class="treat" style="margin-bottom: 30px; margin-top: 30px;">
@@ -79,7 +80,7 @@
         <p>This treat moves a box across the inner perimeter of a rectangle in clockwise and anti-clockwise directions.</p>
     </div>
 
-    <div style="max-width: 1000px; height:500px; border: 1px solid black; margin-bottom: 30px; border: 2px solid white; margin-left: 14%;">
+    <div style="max-width: 1000px; height:500px; margin-bottom: 30px; border: 2px solid grey; margin-left: 14%;">
     <div id="divc" style= "position:relative; padding: 0px 0px">
         <img src="/rock.jpg" width="150px" height="150px"> 
     </div>
@@ -93,6 +94,11 @@
         <p>If the password entered does NOT match the confirm password, when the mouse leaves form border line, the password and confirm password fields dissappears and is replaced by an error message.</p>
         <p>Cool right! check it out</p>
     </div>
+
+    <div>This text is going to get changes on the click of a button </div>
+    <button></button>
+    
+
 
     <div id = "container">
         <form>
@@ -163,6 +169,15 @@
         });
 
         });
+
+        function loadDoc(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+            document.getElementById("demo").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "import.txt");
+            xhttp.send();
+        }
    </script>
 </body>
 </html>
